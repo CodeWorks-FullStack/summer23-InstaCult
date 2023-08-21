@@ -1,0 +1,59 @@
+
+{
+  "folders": [
+    {
+      "path": "summer23InstaCult.client",
+      "name": "client"
+    },
+    {
+      "path": "summer23InstaCult",
+      "name": "server"
+    },{"path":".github/workflows", "name":"workflows"}
+  ],
+  "settings": {
+    "editor.suggestSelection": "first",
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "javascript.referencesCodeLens.enabled": true,
+    "javascript.referencesCodeLens.showOnAllFunctions": true,
+    "typescript.implementationsCodeLens.enabled": true,
+    "typescript.referencesCodeLens.enabled": true,
+    "typescript.referencesCodeLens.showOnAllFunctions": true,
+    "js/ts.implicitProjectConfig.checkJs": true,
+    "files.exclude": {
+      "**/.nyc_*": true,
+      "**/coverage": true,
+      "**/node_modules": true
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "explorer.confirmDragAndDrop": false,
+    "eslint.alwaysShowStatus": true,
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+    "eslint.codeActionsOnSave.mode": "all",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    },
+    "workbench.colorCustomizations": {
+      "activityBar.activeBackground": "#e57e72",
+      "activityBar.background": "#e57e72",
+      "activityBar.foreground": "#15202b",
+      "activityBar.inactiveForeground": "#15202b99",
+      "activityBarBadge.background": "#aef0b5",
+      "activityBarBadge.foreground": "#15202b",
+      "commandCenter.border": "#e7e7e799",
+      "sash.hoverBorder": "#e57e72",
+      "statusBar.background": "#dd5747",
+      "statusBar.foreground": "#e7e7e7",
+      "statusBarItem.hoverBackground": "#e57e72",
+      "statusBarItem.remoteBackground": "#dd5747",
+      "statusBarItem.remoteForeground": "#e7e7e7",
+      "titleBar.activeBackground": "#dd5747",
+      "titleBar.activeForeground": "#e7e7e7",
+      "titleBar.inactiveBackground": "#dd574799",
+      "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#dd5747"
+  }
+}
