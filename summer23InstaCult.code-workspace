@@ -52,8 +52,11 @@
       "titleBar.activeBackground": "#dd5747",
       "titleBar.activeForeground": "#e7e7e7",
       "titleBar.inactiveBackground": "#dd574799",
-      "titleBar.inactiveForeground": "#e7e7e799"
+      "titleBar.inactiveForeground": "#e7e7e799",
+      "statusBar.debuggingBackground": "#47cddd",
+      "statusBar.debuggingForeground": "#15202b"
     },
-    "peacock.color": "#dd5747"
+    "peacock.color": "#dd5747",
+    "FSharp.suggestGitignore": false
   }
 }
