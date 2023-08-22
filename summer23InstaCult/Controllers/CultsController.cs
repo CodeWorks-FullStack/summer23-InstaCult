@@ -12,11 +12,13 @@ public class CultsController : ControllerBase
 {
   private readonly CultsService _cultsService;
   private readonly Auth0Provider _auth;
+  private readonly CultMembersService _cultMembersService;
 
-  public CultsController(CultsService cultsService, Auth0Provider auth)
+  public CultsController(CultsService cultsService, Auth0Provider auth, CultMembersService cultMembersService)
   {
     _cultsService = cultsService;
     _auth = auth;
+    _cultMembersService = cultMembersService;
   }
 
   [HttpPost]
@@ -58,6 +60,20 @@ public class CultsController : ControllerBase
     {
       Cult cult = _cultsService.GetCultById(cultId);
       return Ok(cult);
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+
+  [HttpGet("{cultId}/cultMembers")]
+  public ActionResult<List<Cultist>> GetCultistsByCultId(int cultId)
+  {
+    try
+    {
+      List<Cultist> cultists = _cultMembersService.GetCultistsByCultId(cultId);
+      return Ok(cultists);
     }
     catch (Exception e)
     {

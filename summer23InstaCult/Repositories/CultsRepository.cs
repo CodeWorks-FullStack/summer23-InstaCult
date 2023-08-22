@@ -34,9 +34,12 @@ public class CultsRepository
     string sql = @"
     SELECT
     c.*,
+    COUNT(cm.id) AS cultistCount,
     acc.*
     FROM cults c
-    JOIN accounts acc ON acc.id = c.leaderId;
+    LEFT JOIN cultMembers cm ON cm.cultId = c.id
+    JOIN accounts acc ON acc.id = c.leaderId
+    GROUP BY c.id;
     ";
     List<Cult> cults = _db.Query<Cult, Profile, Cult>(
       sql,
