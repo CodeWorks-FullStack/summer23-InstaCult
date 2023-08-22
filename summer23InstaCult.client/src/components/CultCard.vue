@@ -8,7 +8,15 @@
     <img :src="cult.coverImg" :alt="cult.name" class="cult-img">
     <div class="p-4 mb-3">
 
-      <p class="fs-3 megrim">{{ cult.name }}</p>
+      <p class="fs-3 megrim d-flex justify-content-between">
+        <span>
+          {{ cult.name }}
+        </span>
+        <span title="Number of cultists">
+          <i class="mdi mdi-deathly-hallows"></i>
+          {{ cult.cultistCount }}
+        </span>
+      </p>
       <p> {{ cult.description }}</p>
     </div>
     <div class="text-end p-4">

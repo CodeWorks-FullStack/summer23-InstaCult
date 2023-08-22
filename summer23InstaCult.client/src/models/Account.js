@@ -1,6 +1,10 @@
-export class Profile {
+import { RepoItem } from "./RepoItem.js"
+
+export class Profile extends RepoItem {
   constructor (data) {
-    this.id = data.id
+    super(data)
+    // NOTE inheritance!
+    // this.id = data.id
     this.name = data.name
     this.picture = data.picture
   }

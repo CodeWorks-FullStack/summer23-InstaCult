@@ -3,8 +3,13 @@
     <!-- SECTION hero -->
     <div class="row hero align-items-center">
       <div class="col-12 text-center">
-        <button class="btn btn-danger megrim fs-2 fw-bold me-md-2">Join A Cult?</button>
-        <button data-bs-toggle="modal" data-bs-target="#createCultModal" class="btn btn-danger megrim fs-2 fw-bold">Start
+        <button v-if="!account.id" @click="login()" class="btn btn-danger megrim fs-2 fw-bold me-md-2">Join A
+          Cult?</button>
+        <button v-else data-bs-toggle="modal" data-bs-target="#createCultModal"
+          class="btn btn-danger megrim fs-2 fw-bold">
+          <span class="text-black">
+            Start
+          </span>
           A
           Cult?</button>
       </div>
@@ -43,6 +48,7 @@ import { cultsService } from '../services/CultsService.js'
 import { AppState } from '../AppState.js';
 import CultCard from '../components/CultCard.vue';
 import ModalComponent from '../components/ModalComponent.vue';
+import { AuthService } from '../services/AuthService.js';
 
 export default {
   setup() {
@@ -58,7 +64,11 @@ export default {
       getCults();
     });
     return {
-      cults: computed(() => AppState.cults)
+      cults: computed(() => AppState.cults),
+      account: computed(() => AppState.account),
+      login() {
+        AuthService.loginWithPopup()
+      }
     };
   },
   components: { CultCard, ModalComponent }
